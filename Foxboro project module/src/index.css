@@ -1,5 +1,14 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.login-form-bg-image {
+  background-image: url("https://images.jdmagicbox.com/v2/comp/delhi/f2/011pxx11.xx11.151106180358.y3f2/catalogue/foxboro-instrument-company-rdc-raj-nagar-ghaziabad-ghaziabad-plc-control-panel-manufacturers-qt9shcsh19.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
