@@ -1,12 +1,11 @@
-
-function App() {
+import React from 'react'
+import User from "./pages/UserProfile/userProfile";
+function App(){
   return (
-    <>
-      <div>
-        <h1>hiii</h1>
-      </div>
-    </>
-  );
+    <div>
+      <User/>
+    </div>
+  )
 }
 
-export default App;
+export default App
