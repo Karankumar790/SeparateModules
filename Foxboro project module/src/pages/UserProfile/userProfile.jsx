@@ -1,6 +1,4 @@
 import React from "react";
-// import Box from "@mui/material/Box";
-// import { Grid2222, Typography } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import PageContainer from "../Login/PageConstainer";
 import {
@@ -25,6 +23,7 @@ function userProfile() {
     idCardPhoto: "https://via.placeholder.com/150", // Replace with actual photo URL
     passportPhoto: "https://via.placeholder.com/150", // Replace with actual photo URL
   };
+  
   return (
     <>
      
