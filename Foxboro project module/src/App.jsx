@@ -1,22 +1,24 @@
-import React from 'react'
-import User from "./pages/UserProfile/userProfile";
-import Forgot from './pages/Forgot/forgot';
+import React from "react";
+import Forgot from "./pages/Forgot/forgot";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./pages/Login/login";
+import User from "./pages/UserProfile/userProfile";
 
-import ResetPassword from './pages/Forgot/resetPassword';
-function App(){
+import ResetPassword from "./pages/Forgot/resetPassword";
+function App() {
   return (
     <div>
-      {/* <User/> */}
-      {/* <Forgot/> */}
       <BrowserRouter>
-      <Routes>
-        <Route path='/reset' element=<ResetPassword/> />
-        <Route path='/forgot' element=<Forgot/> />
-      </Routes>
+        <Routes>
+          <Route path="/" element=<Login /> />
+          <Route path="/reset" element=<ResetPassword /> />
+          <Route path="/forgot" element=<Forgot /> />
+          <Route path="/user" element=<User /> />
+
+        </Routes>
       </BrowserRouter>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
