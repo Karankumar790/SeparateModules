@@ -23,10 +23,17 @@ function userProfile() {
     idCardPhoto: "https://via.placeholder.com/150", // Replace with actual photo URL
     passportPhoto: "https://via.placeholder.com/150", // Replace with actual photo URL
   };
-  
+  const userFields = [
+    { label: "Username", value: user.username },
+    { label: "Email", value: user.email },
+    { label: "Contact Number", value: user.contactNumber },
+    { label: "Employee ID", value: user.employeeID },
+    { label: "Organization Name", value: user.organizationName },
+    { label: "Department", value: user.department },
+    { label: "Role in RTMS", value: user.roleInRTMS },
+  ];
   return (
     <>
-     
       <PageContainer
         className="login-form-bg-image"
         showfooter="true"
@@ -39,11 +46,15 @@ function userProfile() {
           justifyContent="center"
           alignItems="center"
         >
-          <Container
-            maxWidth="md"
-            sx={{ mt: 5, mb: 5 }}
-          >
-            <Card sx={{ borderRadius: 4, boxShadow: 3, padding: 3 ,bgcolor:"#a5c8d1"}}>
+          <Container maxWidth="md" sx={{ mt: 5, mb: 5 }}>
+            <Card
+              sx={{
+                borderRadius: 4,
+                boxShadow: 3,
+                padding: 3,
+                bgcolor: "#a5c8d1",
+              }}
+            >
               <Typography variant="h4" align="center" gutterBottom>
                 User Profile
               </Typography>
@@ -96,85 +107,104 @@ function userProfile() {
               <Divider sx={{ mb: 4 }} />
 
               <CardContent>
-                <Grid2 container  spacing={3}>
-                  {/* Each field is in a 2-column layout */}
-                  <Grid2 size={{ xs: 12, sm: 6,md: 12, lg: 6 }}>
+                {/* <Grid2 container  spacing={3}>
+                  <Grid2 size={{ xs: 12, sm: 6,md: 12, lg: 6 }} display={'flex'} gap={2}>
                     <Typography
-                      variant="subtitle2"
+                      variant="h6"
                       sx={{ color: "#555", fontWeight: "bold" }}
                     >
                       Username:
                     </Typography>
-                    <Typography variant="body1" sx={{ color: "#333" }}>
+                    <Typography variant="h5"  sx={{ color: "#333" }}>
                       {user.username}
                     </Typography>
                   </Grid2>
-                  <Grid2 item size={{ xs: 12, sm: 6,md: 12, lg: 6 }}>
+                  <Grid2 item size={{ xs: 12, sm: 6,md: 12, lg: 6 }} display={'flex'} gap={2}>
                     <Typography
-                      variant="subtitle2"
+                      variant="h6"
                       sx={{ color: "#555", fontWeight: "bold" }}
                     >
                       Email:
                     </Typography>
-                    <Typography variant="body1" sx={{ color: "#333" }}>
+                    <Typography variant="h5" sx={{ color: "#333" }}>
                       {user.email}
                     </Typography>
                   </Grid2>
-                  <Grid2 size={{ xs: 12, sm: 6,md: 12, lg: 6 }}>
+                  <Grid2 size={{ xs: 12, sm: 6,md: 12, lg: 6 }} display={'flex'} gap={2}>
                     <Typography
-                      variant="subtitle2"
+                      variant="h6"
                       sx={{ color: "#555", fontWeight: "bold" }}
                     >
                       Contact Number:
                     </Typography>
-                    <Typography variant="body1" sx={{ color: "#333" }}>
+                    <Typography variant="h5" sx={{ color: "#333" }}>
                       {user.contactNumber}
                     </Typography>
                   </Grid2>
-                  <Grid2 size={{ xs: 12, sm: 6,md: 12, lg: 6 }}>
+                  <Grid2 size={{ xs: 12, sm: 6,md: 12, lg: 6 }} display={'flex'} gap={2}>
                     <Typography
-                      variant="subtitle2"
+                      variant="h6"
                       sx={{ color: "#555", fontWeight: "bold" }}
                     >
                       Employee ID:
                     </Typography>
-                    <Typography variant="body1" sx={{ color: "#333" }}>
+                    <Typography variant="h5" sx={{ color: "#333" }}>
                       {user.employeeID}
                     </Typography>
                   </Grid2>
-                  <Grid2 item size={{ xs: 12, sm: 6,md: 12, lg: 6 }}>
+                  <Grid2 item size={{ xs: 12, sm: 6,md: 12, lg: 6 }} display={'flex'} gap={2}>
                     <Typography
-                      variant="subtitle2"
+                      variant="h6"
                       sx={{ color: "#555", fontWeight: "bold" }}
                     >
                       Organization Name:
                     </Typography>
-                    <Typography variant="body1" sx={{ color: "#333" }}>
+                    <Typography variant="h5" sx={{ color: "#333" }}>
                       {user.organizationName}
                     </Typography>
                   </Grid2>
-                  <Grid2 size={{ xs: 12, sm: 6,md: 12, lg: 6 }}>
+                  <Grid2 size={{ xs: 12, sm: 6,md: 12, lg: 6 }} display={'flex'} gap={2}>
                     <Typography
-                      variant="subtitle2"
+                      variant="h6"
                       sx={{ color: "#555", fontWeight: "bold" }}
                     >
                       Department:
                     </Typography>
-                    <Typography variant="body1" sx={{ color: "#333" }}>
+                    <Typography variant="h5" sx={{ color: "#333" }}>
                       {user.department}
                     </Typography>
                   </Grid2>
-                  <Grid2 size={{ xs: 12, sm: 6,md: 12, lg: 6 }}>
+                  <Grid2 size={{ xs: 12, sm: 6,md: 12, lg: 6 }} display={'flex'} gap={2}>
                     <Typography
-                      variant="subtitle2"
+                      variant="h6"
                       sx={{ color: "#555", fontWeight: "bold" }}
                     >
                       Role in RTMS:
                     </Typography>
-                    <Typography variant="body1" sx={{ color: "#333" }}>
+                    <Typography variant="h5" sx={{ color: "#333" }}>
                       {user.roleInRTMS}
                     </Typography>
                   </Grid2>
+                </Grid2> */}
+
+                <Grid2 container spacing={1}>
+                  {userFields.map((field, index) => (
+                    <Grid2
+                      key={index}
+                      size={{ xs: 12, sm: 12, md: 12, lg: 12 }}
+                      display="flex"
+                    >
+                      <Typography
+                        variant="h6"
+                        sx={{ color: "#555", fontWeight: "bold" }}
+                      >
+                        {field.label}:
+                      </Typography>
+                      <Typography variant="h6" sx={{ color: "#333" }}>
+                        {field.value}
+                      </Typography>
+                    </Grid2>
+                  ))}
                 </Grid2>
               </CardContent>
             </Card>

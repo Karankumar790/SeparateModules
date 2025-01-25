@@ -7,7 +7,7 @@ function PageContainer({ children, ...props }) {
   return (
     <Box display="flex" flexDirection="column" height="99.98vh">
       {props?.showheader && <Header />}
-      <Box sx={{ flex: 1, overflowY: "auto" }} {...props}>
+      <Box sx={{ flex: 1, overflow: "hidden" }} {...props}>
         {children}
       </Box>
       {props?.showfooter && <Footer />}
