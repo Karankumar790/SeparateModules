@@ -16,7 +16,6 @@ function App() {
           <Route path="/forgot" element=<Forgot /> />
           <Route path="/user" element=<User /> />
           <Route path="/organization" element=<Organization /> />
-
         </Routes>
       </BrowserRouter>
     </div>

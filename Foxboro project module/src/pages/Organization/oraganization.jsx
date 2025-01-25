@@ -891,7 +891,7 @@ function ManageAsset() {
   };
 
   return (
-    <div>
+    <div >
       <DashboardHeader />
       <Paper sx={{ m: 3, mt: "5%" }}>
         <Grid2 container gap={1} p={2}>

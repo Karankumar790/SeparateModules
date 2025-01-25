@@ -48,7 +48,7 @@ function userProfile() {
           justifyContent="center"
           alignItems="center"
         >
-          <Container maxWidth="md" sx={{ mt: 5, mb: 5 }}>
+          <Container  sx={{ mt: 5, mb: 5, width:"58%" }}>
             <Card
               sx={{
                 borderRadius: 4,
@@ -197,15 +197,19 @@ function userProfile() {
                       display="flex"
                       gap={2}
                     >
-                      <Typography
-                        variant="h6"
-                        sx={{ color: "#555", fontWeight: "bold" }}
-                      >
-                        {field.label}:
-                      </Typography>
-                      <Typography variant="h5" sx={{ color: "#333" }}>
-                        {field.value}
-                      </Typography>
+                      <Grid2 size={{ xs: 12, sm: 6, md: 12, lg: 6 }}>
+                        <Typography
+                          variant="h6"
+                          sx={{ color: "#555", fontWeight: "bold" }}
+                        >
+                          {field.label}:
+                        </Typography>
+                      </Grid2>
+                      <Grid2 size={{ xs: 12, sm: 6, md: 12, lg: 6 }}>
+                        <Typography variant="h5" sx={{ color: "#333" }}>
+                          {field.value}
+                        </Typography>
+                      </Grid2>
                     </Grid2>
                   ))}
                 </Grid2>
