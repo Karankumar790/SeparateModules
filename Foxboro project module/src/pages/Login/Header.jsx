@@ -25,7 +25,7 @@ function Header() {
     <>
       <Grid2 container bgcolor="#080c0f" color="#fff" p={0.5}>
         <Grid2
-          size={{ xs: 11, sm: 11, md: 11, lg: 11 }}
+          size={{ xs: 9, sm: 9, md: 11, lg: 11 }}
           display="flex"
           gap="2"
           alignItems="center"
@@ -61,7 +61,7 @@ function Header() {
             </Typography>
           </Typography>
         </Grid2>
-        <Grid2 size={{ xs: 1, sm: 1, md: 1, lg: 1 }}>
+        <Grid2 size={{ xs: 2, sm: 2, md: 1, lg: 1 }}>
           {/* <Box  display="flex" alignItems="center" justifyContent="end" gap={1}>
             <Box p={2}>
               <AccountCircleIcon sx={{ color: 'white', fontSize: '400%' }} />
@@ -78,7 +78,7 @@ function Header() {
                 ...(isMobile ? { marginRight: 0 } : { marginRight: 2 }),
               }}
             >
-              <AccountCircleIcon sx={{ fontSize: isMobile ? 60 : 75 }} />{" "}
+              <AccountCircleIcon sx={{ fontSize: isMobile ? 60 : 70 }} />{" "}
               {/* User Icon */}
             </IconButton>
 

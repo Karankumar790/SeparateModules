@@ -1,6 +1,4 @@
 import React from "react";
-// import Box from "@mui/material/Box";
-// import { Grid2222, Typography } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import PageContainer from "../Login/PageConstainer";
 import {
@@ -189,14 +187,14 @@ function userProfile() {
                   </Grid2>
                 </Grid2> */}
 
-                <Grid2 container spacing={3}>
+                <Grid2 container spacing={1}>
                   {userFields.map((field, index) => (
                     <Grid2
                       key={index}
-                      size={{ xs: 12, sm: 6, md: 12, lg: 6 }}
+                      size={{ xs: 12, sm: 12, md: 12, lg: 12 }}
                       display="flex"
-                      gap={2}
                     >
+<<<<<<< HEAD
                       <Grid2 size={{ xs: 12, sm: 6, md: 12, lg: 6 }}>
                         <Typography
                           variant="h6"
@@ -210,6 +208,17 @@ function userProfile() {
                           {field.value}
                         </Typography>
                       </Grid2>
+=======
+                      <Typography
+                        variant="h6"
+                        sx={{ color: "#555", fontWeight: "bold" }}
+                      >
+                        {field.label}:
+                      </Typography>
+                      <Typography variant="h6" sx={{ color: "#333" }}>
+                        {field.value}
+                      </Typography>
+>>>>>>> a223dea7e7fd730c2afc6fa104916d9aae92a543
                     </Grid2>
                   ))}
                 </Grid2>
