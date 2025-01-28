@@ -891,7 +891,7 @@ function ManageAsset() {
   };
 
   return (
-    <div >
+    <div>
       <DashboardHeader />
       <Paper sx={{ m: 3, mt: "5%" }}>
         <Grid2 container gap={1} p={2}>
@@ -1971,7 +1971,12 @@ function ManageAsset() {
               ))}
 
               {/* Action Buttons */}
-              <Grid2 size={{lg:12,md:9,sm:9,xs:12}}  display={'flex'} mt={2} justifyContent={"end"}>
+              <Grid2
+                size={{ lg: 12, md: 9, sm: 9, xs: 12 }}
+                display={"flex"}
+                mt={2}
+                justifyContent={"end"}
+              >
                 <Grid2 item>
                   {isEditOrganization ? (
                     <Button

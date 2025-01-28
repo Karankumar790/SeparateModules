@@ -1,8 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  overflow: hidden;
+  /* box-sizing: border-box; */
+  /* overflow: hidden; */
 }
 
 .login-form-bg-image {
@@ -12,5 +12,10 @@
   height: 100vh;
   justify-content: center;
   align-items: center;
+}
+
+.style-sheet {
+   overflow: hidden;
+   background-color: red;
 }
 
